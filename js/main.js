@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initAccordion();
     initFAQ();
+    initComparisonToggle();
     initSignupForm();
 });
 
@@ -96,6 +97,18 @@ function initFAQ() {
             }
         });
     });
+}
+
+// Comparison Table Toggle
+function initComparisonToggle() {
+    const toggle = document.getElementById('comparison-toggle');
+    const wrapper = toggle?.closest('.comparison-wrapper');
+
+    if (toggle && wrapper) {
+        toggle.addEventListener('click', () => {
+            wrapper.classList.toggle('active');
+        });
+    }
 }
 
 // Signup Form

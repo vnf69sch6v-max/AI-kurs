@@ -555,10 +555,51 @@ a {
     border-bottom: none;
 }
 
-/* Comparison Table */
+/* Comparison Table - Collapsible */
+.comparison-wrapper {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.comparison-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: transparent;
+    border: 1px solid var(--gray-2);
+    border-radius: 980px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.comparison-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.comparison-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.comparison-wrapper.active .comparison-icon {
+    transform: rotate(45deg);
+}
+
 .comparison-table {
-    margin-top: 80px;
-    overflow-x: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin 0.5s ease;
+    margin-top: 0;
+}
+
+.comparison-wrapper.active .comparison-table {
+    max-height: 800px;
+    margin-top: 40px;
 }
 
 .comparison-table table {
