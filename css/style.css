@@ -597,6 +597,17 @@ a {
     color: var(--gray-1);
 }
 
+.signup-desc {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--gray-1);
+    margin-bottom: 40px;
+}
+
+.signup-desc strong {
+    color: var(--white);
+}
+
 .signup-form {
     display: flex;
     gap: 12px;
