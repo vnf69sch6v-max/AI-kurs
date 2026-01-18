@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initSmoothScroll();
     initAccordion();
+    initFAQ();
     initSignupForm();
 });
 
@@ -63,6 +64,27 @@ function initAccordion() {
         const header = item.querySelector('.accordion-header');
 
         header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            items.forEach(i => i.classList.remove('active'));
+
+            // Open clicked (if wasn't active)
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+// FAQ Accordion
+function initFAQ() {
+    const items = document.querySelectorAll('.faq-item');
+
+    items.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
             // Close all

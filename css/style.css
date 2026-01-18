@@ -476,7 +476,8 @@ a {
 }
 
 .plan:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(138, 43, 226, 0.15);
 }
 
 .plan-featured {
@@ -552,6 +553,118 @@ a {
 
 .plan-features li:last-child {
     border-bottom: none;
+}
+
+/* Comparison Table */
+.comparison-table {
+    margin-top: 80px;
+    overflow-x: auto;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--gray-2);
+}
+
+.comparison-table th {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.comparison-table th:first-child {
+    text-align: left;
+    color: var(--white);
+}
+
+.comparison-table td {
+    font-size: 15px;
+    color: var(--gray-1);
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    color: var(--white);
+}
+
+.comparison-table td.highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* FAQ */
+.faq {
+    padding: 120px 24px;
+    background: var(--gray-3);
+}
+
+.faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--gray-2);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--accent);
+}
+
+.faq-icon {
+    font-size: 24px;
+    color: var(--gray-1);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 24px;
+}
+
+.faq-answer p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--gray-1);
 }
 
 /* Signup */
