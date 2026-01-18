@@ -193,11 +193,16 @@ a {
     background-clip: text;
 }
 
-.hero>.hero-container>p {
-    font-size: 21px;
+.hero-subtitle {
+    font-size: 20px;
+    line-height: 1.7;
     color: var(--gray-1);
     max-width: 540px;
     margin: 0 auto 40px;
+}
+
+.hero-subtitle strong {
+    color: var(--white);
 }
 
 .hero-actions {
