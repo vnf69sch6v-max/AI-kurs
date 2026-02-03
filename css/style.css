@@ -1124,3 +1124,347 @@ h5 {
         margin-bottom: 48px;
     }
 }
+
+/* ==========================================
+   Product Modal Styles
+   ========================================== */
+
+/* Product Buttons */
+.product-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Modal Overlay */
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-modal.active {
+    display: block;
+    opacity: 1;
+}
+
+.product-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+/* Modal Content */
+.product-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: var(--white);
+    border-radius: 20px;
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.product-modal.active .product-modal-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close Button */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--bg-light);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--gray-light);
+}
+
+.modal-close svg {
+    width: 20px;
+    height: 20px;
+    color: var(--gray);
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 40px 40px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.modal-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.modal-header h2 {
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.modal-dimensions {
+    font-size: 15px;
+    color: var(--gray);
+}
+
+/* Modal Body */
+.modal-body {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Diagram Section */
+.modal-diagram {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exploded-view {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+}
+
+/* SVG Animations */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.3);
+    }
+}
+
+.hotspot.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Modal Info */
+.modal-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.modal-steps {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+.modal-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.modal-steps li:last-child {
+    border-bottom: none;
+}
+
+.step-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* Problem/Solution */
+.problem-solution {
+    margin-bottom: 32px;
+}
+
+.problem,
+.solution {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.problem {
+    background: #FEE2E2;
+}
+
+.solution {
+    background: #DCFCE7;
+}
+
+.icon-problem {
+    color: #DC2626;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.icon-solution {
+    color: #16A34A;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.problem p,
+.solution p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--dark);
+}
+
+/* Specs Section */
+.modal-specs {
+    margin-bottom: 24px;
+}
+
+.modal-specs h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 16px;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table tr {
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.specs-table td {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.specs-table td:first-child {
+    color: var(--gray);
+}
+
+.specs-table td:last-child {
+    color: var(--dark);
+    font-weight: 500;
+    text-align: right;
+}
+
+/* Variant Grid */
+.variant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.variant-item {
+    padding: 12px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.variant-item:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+/* Modal CTA */
+.modal-cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .product-modal-content {
+        width: 95%;
+        max-height: 95vh;
+        border-radius: 16px;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .modal-header {
+        padding: 32px 24px 20px;
+    }
+
+    .modal-diagram {
+        order: -1;
+    }
+
+    .variant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-buttons {
+        flex-direction: column;
+    }
+
+    .product-buttons .btn-primary,
+    .product-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}

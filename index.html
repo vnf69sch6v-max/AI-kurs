@@ -129,7 +129,11 @@
                             <li>Zapobiega wyginaniu elementów</li>
                             <li>Dostępna w różnych długościach</li>
                         </ul>
-                        <a href="#kontakt" class="btn-outline">Zobacz specyfikację</a>
+                        <div class="product-buttons">
+                            <button class="btn-primary" onclick="openProductModal('listwa')">Zobacz
+                                zastosowanie</button>
+                            <a href="#kontakt" class="btn-outline">Zapytaj o cenę</a>
+                        </div>
                     </div>
                 </div>
 
@@ -147,7 +151,11 @@
                             <li>Łatwy montaż</li>
                             <li>Estetyczne wykończenie</li>
                         </ul>
-                        <a href="#kontakt" class="btn-outline">Zobacz specyfikację</a>
+                        <div class="product-buttons">
+                            <button class="btn-primary" onclick="openProductModal('plytka')">Zobacz
+                                zastosowanie</button>
+                            <a href="#kontakt" class="btn-outline">Zapytaj o cenę</a>
+                        </div>
                     </div>
                 </div>
 
@@ -405,6 +413,250 @@
             </div>
         </div>
     </footer>
+
+    <!-- Product Modal: Płytka Mocująca -->
+    <div class="product-modal" id="plytka-modal">
+        <div class="product-modal-overlay" onclick="closeProductModal()"></div>
+        <div class="product-modal-content">
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Zamknij">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-badge">Płytka mocująca</div>
+                <h2>Płytka mocująca ścianę tylną</h2>
+                <p class="modal-dimensions">23 × 25 × 2.5 mm</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-diagram">
+                    <svg viewBox="0 0 400 300" class="exploded-view">
+                        <!-- Cabinet Body (Isometric) -->
+                        <g class="cabinet-body">
+                            <path d="M100,200 L100,80 L180,40 L260,80 L260,200 L180,240 L100,200" fill="#E8E8E8"
+                                stroke="#CCCCCC" stroke-width="1.5" />
+                            <path d="M180,40 L180,160 L100,200 M180,160 L260,200" fill="none" stroke="#CCCCCC"
+                                stroke-width="1" />
+                            <!-- Corner marks for plates -->
+                            <circle cx="115" cy="90" r="4" fill="#C87941" class="hotspot pulse" />
+                            <circle cx="245" cy="90" r="4" fill="#C87941" class="hotspot pulse" />
+                            <circle cx="115" cy="185" r="4" fill="#C87941" class="hotspot pulse" />
+                            <circle cx="245" cy="185" r="4" fill="#C87941" class="hotspot pulse" />
+                        </g>
+
+                        <!-- Back Panel (Offset) -->
+                        <g class="back-panel" transform="translate(40, -20)">
+                            <path d="M100,200 L100,80 L180,40 L180,160 L100,200" fill="#FFFFFF" stroke="#DDDDDD"
+                                stroke-width="1.5" />
+                            <text x="140" y="120" font-size="10" fill="#86868B" text-anchor="middle">Tylna ściana</text>
+                        </g>
+
+                        <!-- Mounting Plates -->
+                        <g class="mounting-plates">
+                            <rect x="280" y="60" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
+                                stroke-width="1" />
+                            <rect x="280" y="90" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
+                                stroke-width="1" />
+                            <rect x="280" y="120" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
+                                stroke-width="1" />
+                            <rect x="280" y="150" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
+                                stroke-width="1" />
+                            <text x="290" y="185" font-size="9" fill="#86868B" text-anchor="middle">4× płytka</text>
+                        </g>
+
+                        <!-- Assembly Arrows -->
+                        <g class="arrows" stroke="#86868B" stroke-width="1" stroke-dasharray="4 2" fill="none">
+                            <path d="M270,75 L240,85" marker-end="url(#arrowhead)" />
+                            <path d="M270,105 L240,115" marker-end="url(#arrowhead)" />
+                            <path d="M175,70 L155,90" marker-end="url(#arrowhead)" />
+                        </g>
+
+                        <!-- Arrow marker -->
+                        <defs>
+                            <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                                <path d="M0,0 L6,3 L0,6 Z" fill="#86868B" />
+                            </marker>
+                        </defs>
+
+                        <!-- Labels -->
+                        <text x="320" y="40" font-size="11" fill="#1D1D1F" font-weight="500">Schemat montażu</text>
+                    </svg>
+                </div>
+
+                <div class="modal-info">
+                    <h3>Jak to działa?</h3>
+                    <ul class="modal-steps">
+                        <li>
+                            <span class="step-icon">1</span>
+                            <span>Płytka przykręcana do korpusu mebla</span>
+                        </li>
+                        <li>
+                            <span class="step-icon">2</span>
+                            <span>Tylna ściana wsuwana w rowek płytki</span>
+                        </li>
+                        <li>
+                            <span class="step-icon">3</span>
+                            <span>Wkręt blokuje tylną ścianę w miejscu</span>
+                        </li>
+                        <li>
+                            <span class="step-icon">4</span>
+                            <span>Możliwość łatwego demontażu przy transporcie</span>
+                        </li>
+                    </ul>
+
+                    <div class="modal-specs">
+                        <h4>Dane techniczne</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Wymiary</td>
+                                <td>23 × 25 × 2.5 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Materiał</td>
+                                <td>Stal ocynkowana</td>
+                            </tr>
+                            <tr>
+                                <td>Gwint</td>
+                                <td>M3</td>
+                            </tr>
+                            <tr>
+                                <td>Pakowanie</td>
+                                <td>100 / 500 / 1000 szt.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="#kontakt" class="btn-primary modal-cta" onclick="closeProductModal()">Zapytaj o cenę</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal: Listwa Wzmacniająca -->
+    <div class="product-modal" id="listwa-modal">
+        <div class="product-modal-overlay" onclick="closeProductModal()"></div>
+        <div class="product-modal-content">
+            <button class="modal-close" onclick="closeProductModal()" aria-label="Zamknij">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-badge">Listwa wzmacniająca</div>
+                <h2>Listwa wzmacniająca</h2>
+                <p class="modal-dimensions">Długości: 300 / 400 / 500 / 600 mm</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-diagram">
+                    <svg viewBox="0 0 400 300" class="exploded-view">
+                        <!-- Before/After comparison -->
+
+                        <!-- BEFORE: Drawer without reinforcement -->
+                        <g class="before-state">
+                            <text x="100" y="30" font-size="12" fill="#D32F2F" font-weight="500">Bez listwy</text>
+                            <!-- Drawer sides -->
+                            <rect x="30" y="50" width="140" height="100" fill="none" stroke="#CCCCCC" stroke-width="2"
+                                rx="2" />
+                            <!-- Bent bottom (problem) -->
+                            <path d="M30,130 Q100,160 170,130" fill="none" stroke="#86868B" stroke-width="2" />
+                            <!-- Weight arrow -->
+                            <path d="M100,80 L100,110" stroke="#D32F2F" stroke-width="2" marker-end="url(#arrowRed)" />
+                            <text x="100" y="70" font-size="9" fill="#D32F2F" text-anchor="middle">Obciążenie</text>
+                            <!-- Problem indicator -->
+                            <path d="M85,150 Q100,165 115,150" fill="none" stroke="#D32F2F" stroke-width="1"
+                                stroke-dasharray="3 2" />
+                            <text x="100" y="180" font-size="9" fill="#D32F2F" text-anchor="middle">Ugięcie dna</text>
+                        </g>
+
+                        <!-- AFTER: Drawer with reinforcement -->
+                        <g class="after-state" transform="translate(200, 0)">
+                            <text x="100" y="30" font-size="12" fill="#4CAF50" font-weight="500">Z listwą DAG</text>
+                            <!-- Drawer sides -->
+                            <rect x="30" y="50" width="140" height="100" fill="none" stroke="#CCCCCC" stroke-width="2"
+                                rx="2" />
+                            <!-- Straight bottom (solution) -->
+                            <line x1="30" y1="130" x2="170" y2="130" stroke="#86868B" stroke-width="2" />
+                            <!-- Reinforcement bar -->
+                            <rect x="40" y="135" width="120" height="8" rx="2" fill="#C87941" stroke="#A05A2C"
+                                stroke-width="1" />
+                            <text x="100" y="160" font-size="8" fill="#C87941" font-weight="500"
+                                text-anchor="middle">LISTWA DAG</text>
+                            <!-- Weight arrow -->
+                            <path d="M100,80 L100,110" stroke="#4CAF50" stroke-width="2"
+                                marker-end="url(#arrowGreen)" />
+                            <!-- Checkmark -->
+                            <circle cx="100" cy="180" r="12" fill="#4CAF50" />
+                            <path d="M94,180 L98,184 L106,176" stroke="white" stroke-width="2" fill="none" />
+                        </g>
+
+                        <!-- Arrow markers -->
+                        <defs>
+                            <marker id="arrowRed" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                                <path d="M0,0 L6,3 L0,6 Z" fill="#D32F2F" />
+                            </marker>
+                            <marker id="arrowGreen" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                                <path d="M0,0 L6,3 L0,6 Z" fill="#4CAF50" />
+                            </marker>
+                        </defs>
+
+                        <!-- Center divider -->
+                        <line x1="200" y1="40" x2="200" y2="200" stroke="#E8E8E8" stroke-width="1"
+                            stroke-dasharray="4 4" />
+
+                        <!-- Labels -->
+                        <text x="200" y="230" font-size="11" fill="#1D1D1F" font-weight="500"
+                            text-anchor="middle">Porównanie: przed i po montażu</text>
+                    </svg>
+                </div>
+
+                <div class="modal-info">
+                    <h3>Rozwiązany problem</h3>
+                    <div class="problem-solution">
+                        <div class="problem">
+                            <span class="icon-problem">✗</span>
+                            <p><strong>Problem:</strong> Dno szuflady ugina się przy obciążeniu, meble tracą estetykę i
+                                funkcjonalność</p>
+                        </div>
+                        <div class="solution">
+                            <span class="icon-solution">✓</span>
+                            <p><strong>Rozwiązanie:</strong> Listwa wzmacnia konstrukcję, dno pozostaje proste przez
+                                lata użytkowania</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-specs">
+                        <h4>Dostępne warianty</h4>
+                        <div class="variant-grid">
+                            <div class="variant-item">300 mm</div>
+                            <div class="variant-item">400 mm</div>
+                            <div class="variant-item">500 mm</div>
+                            <div class="variant-item">600 mm</div>
+                        </div>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Materiał</td>
+                                <td>Stal ocynkowana</td>
+                            </tr>
+                            <tr>
+                                <td>Profil</td>
+                                <td>C-kształtny</td>
+                            </tr>
+                            <tr>
+                                <td>Montaż</td>
+                                <td>Wkręty / klej</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="#kontakt" class="btn-primary modal-cta" onclick="closeProductModal()">Zapytaj o cenę</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Success Modal -->
     <div class="modal" id="success-modal">

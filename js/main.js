@@ -262,5 +262,32 @@ function closeModal() {
     }
 }
 
-// Make closeModal global for onclick
+// Product Modal Functions
+function openProductModal(productId) {
+    const modal = document.getElementById(`${productId}-modal`);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeProductModal() {
+    const modals = document.querySelectorAll('.product-modal');
+    modals.forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+
+// ESC key to close modals
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeProductModal();
+        closeModal();
+    }
+});
+
+// Make functions global for onclick
 window.closeModal = closeModal;
+window.openProductModal = openProductModal;
+window.closeProductModal = closeProductModal;
