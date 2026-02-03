@@ -5,459 +5,415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Savori Masterclass - Kurs który zmieni Twoje życie. Opanuj AI i odzyskaj kontrolę nad swoim czasem.">
+        content="DAG - Producent okuć meblowych najwyższej jakości. Listwy wzmacniające, płytki mocujące i okucia na zamówienie dla profesjonalistów.">
+    <meta name="keywords" content="okucia meblowe, listwy wzmacniające, płytki mocujące, producent okuć, meble, Polska">
+    <meta name="author" content="Przedsiębiorstwo Produkcyjne DAG Michał Marcinkowski">
 
-    <title>Savori Masterclass</title>
+    <title>DAG | Okucia meblowe najwyższej jakości</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Przedsiębiorstwo Produkcyjne DAG Michał Marcinkowski",
+        "description": "Producent okuć meblowych najwyższej jakości",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PL"
+        }
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-icon">◆</span>
-                Savori Masterclass
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-text">DAG</span>
             </a>
-            <div class="nav-links" id="nav-links">
-                <a href="#program">Program</a>
-                <a href="#cennik">Cennik</a>
-                <a href="#signup" class="nav-cta">Zmień swoje życie</a>
-            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#produkty">Produkty</a></li>
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#proces">Proces</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+            <a href="#kontakt" class="btn-primary header-cta">Zapytaj o wycenę</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-glow hero-glow-1"></div>
-            <div class="hero-glow hero-glow-2"></div>
-            <div class="hero-glow hero-glow-3"></div>
-            <div class="hero-grid"></div>
-        </div>
-        <div class="hero-container">
-            <h1>Przestań gonić.<br><span>Zacznij wyprzedzać.</span></h1>
-            <p class="hero-subtitle">
-                Wyobraź sobie, że kończysz pracę o 15:00.<br>
-                Że masz czas dla rodziny. Że szef pyta jak to robisz.<br>
-                <strong>AI to umożliwia — my Cię tego nauczymy.</strong>
-            </p>
-            <div class="hero-actions">
-                <a href="#signup" class="btn-primary">
-                    <span>Zacznij transformację</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                    </svg>
-                </a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Precyzja<br>w każdym detalu</h1>
+                <p class="hero-subtitle">Okucia meblowe najwyższej jakości dla profesjonalistów</p>
+                <div class="hero-cta">
+                    <a href="#produkty" class="btn-primary">Zobacz produkty</a>
+                    <a href="#kontakt" class="btn-secondary">Zapytaj o wycenę</a>
+                </div>
             </div>
-            <p class="hero-subtext">Dołącz do <strong>847</strong> osób, które już zmieniły swoją przyszłość</p>
-        </div>
-    </section>
+            <div class="hero-visual">
+                <div class="hero-product"></div>
+            </div>
+            <a href="#o-nas" class="scroll-indicator" aria-label="Przewiń w dół">
+                <span class="scroll-arrow"></span>
+            </a>
+        </section>
 
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat">
-                <span class="stat-value">6</span>
-                <span class="stat-label">tygodni do nowego Ciebie</span>
-            </div>
-            <div class="stat">
-                <span class="stat-value">10h</span>
-                <span class="stat-label">oszczędności tygodniowo</span>
-            </div>
-            <div class="stat">
-                <span class="stat-value">∞</span>
-                <span class="stat-label">nowych możliwości</span>
-            </div>
-        </div>
-    </section>
+        <!-- About Section -->
+        <section class="about" id="o-nas">
+            <div class="section-container">
+                <p class="about-intro">Od lat tworzymy okucia meblowe, które łączą niemiecką precyzję z polską
+                    solidnością. Każdy element, który opuszcza naszą produkcję, to gwarancja trwałości Twoich mebli.</p>
 
-    <!-- Value -->
-    <section class="value">
-        <div class="value-container">
-            <h2>Za rok będziesz żałować,<br>że nie zacząłeś dziś.</h2>
-            <p class="value-sub">Świat przyspiesza. Ci, którzy opanują AI teraz, będą liderami. Reszta będzie nadrabiać.
-            </p>
-        </div>
-    </section>
-
-    <!-- Tools -->
-    <section class="tools">
-        <div class="tools-container">
-            <p class="tools-label">Twoje nowe supermoce</p>
-            <div class="tools-grid">
-                <div class="tool">ChatGPT</div>
-                <div class="tool">Gemini</div>
-                <div class="tool">Claude</div>
-                <div class="tool">Perplexity</div>
-                <div class="tool">Midjourney</div>
-                <div class="tool">Zapier</div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">lat doświadczenia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5000">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">zrealizowanych zamówień</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="120">0</span>
+                        <span class="stat-label">partnerów handlowych</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">wariantów produktów</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Program - Accordion -->
-    <section id="program" class="program">
-        <div class="section-container">
-            <div class="section-header">
-                <p class="section-label">Twoja droga</p>
-                <h2>6 tygodni, które zmienią wszystko</h2>
-                <p class="section-desc">Każdy moduł to nowa supermoc. Kliknij, żeby zobaczyć co Cię czeka.</p>
-            </div>
+        <!-- Products Section -->
+        <section class="products" id="produkty">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-label">Nasze produkty</p>
+                    <h2 class="section-title">Stworzone dla trwałości</h2>
+                </div>
 
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title">
-                            <span class="accordion-num">01</span>
-                            <div>
-                                <h3>Mów, a AI zrobi resztę</h3>
-                                <p>Naucz się rozmawiać z AI tak, żeby rozumiało Cię za pierwszym razem</p>
-                            </div>
-                        </div>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Sekrety promptów, które dają wyniki w 10 sekund</li>
-                            <li>ChatGPT, Gemini, Claude — jeden skill, wszystkie modele</li>
-                            <li>Techniki, które zaoszczędzą Ci godziny każdego dnia</li>
-                            <li>Praktyka: Twój pierwszy asystent AI gotowy do pracy</li>
+                <!-- Product 1: Listwa -->
+                <div class="product-showcase">
+                    <div class="product-image">
+                        <div class="product-placeholder listwa"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Listwa wzmacniająca</h3>
+                        <p class="product-description">Niewidoczna siła, która przedłuża życie mebli. Nasza listwa
+                            wzmacniająca zapobiega wyginaniu się szuflad i komod, zachowując ich funkcjonalność przez
+                            lata intensywnego użytkowania.</p>
+                        <ul class="product-features">
+                            <li>Zwiększa trwałość konstrukcji</li>
+                            <li>Zapobiega wyginaniu elementów</li>
+                            <li>Dostępna w różnych długościach</li>
                         </ul>
+                        <a href="#kontakt" class="btn-outline">Zobacz specyfikację</a>
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title">
-                            <span class="accordion-num">02</span>
-                            <div>
-                                <h3>Wiedza na wyciągnięcie ręki</h3>
-                                <p>Znajdź odpowiedź na każde pytanie w sekundy, nie godziny</p>
-                            </div>
-                        </div>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Perplexity — Twój osobisty zespół badawczy</li>
-                            <li>Research, który kiedyś zajmował dni, teraz trwa minuty</li>
-                            <li>Zawsze z dowodami i źródłami</li>
-                            <li>Praktyka: Przygotuj research do projektu w 15 minut</li>
+                <!-- Product 2: Płytka -->
+                <div class="product-showcase reverse">
+                    <div class="product-image">
+                        <div class="product-placeholder plytka"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Płytka mocująca ścianę tylną</h3>
+                        <p class="product-description">Koniec z obluzowanymi ścianami tylnymi. Płytka mocująca DAG to
+                            szybki montaż i pewne trzymanie — bez kompromisów.</p>
+                        <ul class="product-features">
+                            <li>Solidne mocowanie</li>
+                            <li>Łatwy montaż</li>
+                            <li>Estetyczne wykończenie</li>
                         </ul>
+                        <a href="#kontakt" class="btn-outline">Zobacz specyfikację</a>
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title">
-                            <span class="accordion-num">03</span>
-                            <div>
-                                <h3>Pisz jak zawodowiec</h3>
-                                <p>Maile, posty, raporty — jakość agencji, czas amatorów</p>
-                            </div>
+                <!-- Product 3: Custom -->
+                <div class="product-custom">
+                    <div class="custom-header">
+                        <h3 class="product-title">Twój projekt.<br>Nasza realizacja.</h3>
+                        <p class="product-description">Masz projekt, który wymaga niestandardowego rozwiązania?
+                            Przekształcimy Twoją wizję w precyzyjnie wykonane okucie.</p>
+                    </div>
+                    <div class="custom-steps">
+                        <div class="custom-step">
+                            <span class="step-number">01</span>
+                            <h4>Wyślij projekt</h4>
+                            <p>Przekaż nam specyfikację lub szkic</p>
                         </div>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Teksty, które przekonują i sprzedają</li>
-                            <li>LinkedIn, który przyciąga możliwości</li>
-                            <li>E-maile, na które ludzie odpowiadają</li>
-                            <li>Praktyka: Tydzień treści gotowy w godzinę</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title">
-                            <span class="accordion-num">04</span>
-                            <div>
-                                <h3>Twórz obrazy myślą</h3>
-                                <p>Profesjonalne grafiki bez Photoshopa, bez grafika, bez czekania</p>
-                            </div>
+                        <div class="custom-step">
+                            <span class="step-number">02</span>
+                            <h4>Wycena</h4>
+                            <p>Otrzymasz szczegółową ofertę</p>
                         </div>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Midjourney — Twój osobisty artysta</li>
-                            <li>Grafiki, które wyglądają jak za tysiące złotych</li>
-                            <li>Spójny styl Twojej marki w każdym obrazie</li>
-                            <li>Praktyka: Portfolio grafik gotowe w jeden wieczór</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title">
-                            <span class="accordion-num">05</span>
-                            <div>
-                                <h3>Excel Ci się kłania</h3>
-                                <p>Dane, raporty, analizy — to, co męczyło, teraz zachwyca</p>
-                            </div>
+                        <div class="custom-step">
+                            <span class="step-number">03</span>
+                            <h4>Produkcja</h4>
+                            <p>Realizujemy zamówienie</p>
                         </div>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Formuły, które piszesz słowami, nie kodem</li>
-                            <li>Raporty, które robią wrażenie na szefie</li>
-                            <li>Analiza danych bez bycia analitykiem</li>
-                            <li>Praktyka: Raport, który zaimponuje zarządowi</li>
-                        </ul>
                     </div>
+                    <a href="#kontakt" class="btn-primary">Zapytaj o wycenę</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="why-us" id="dlaczego-my">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-label">Dlaczego my</p>
+                    <h2 class="section-title">Zaufanie budowane latami</h2>
                 </div>
 
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <div class="accordion-title">
-                            <span class="accordion-num">06</span>
-                            <div>
-                                <h3>Niech praca robi się sama</h3>
-                                <p>Automatyzacja, która uwalnia Twój czas na to, co naprawdę ważne</p>
-                            </div>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6" />
+                            </svg>
                         </div>
-                        <span class="accordion-icon">+</span>
-                    </button>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>Systemy, które pracują gdy Ty śpisz</li>
-                            <li>Zapier i Make — Twoi niewidzialni asystenci</li>
-                            <li>Koniec powtarzalnych zadań na zawsze</li>
-                            <li>Praktyka: Automatyzacja, która zwolni Ci 5h/tydzień</li>
-                        </ul>
+                        <h4>Polska produkcja</h4>
+                        <p>Wszystko produkujemy lokalnie, zachowując pełną kontrolę jakości</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <h4>Terminowość dostaw</h4>
+                        <p>Dotrzymujemy ustalonych terminów — zawsze</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" />
+                            </svg>
+                        </div>
+                        <h4>Elastyczność zamówień</h4>
+                        <p>Od małych partii po produkcję seryjną</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <h4>Konkurencyjne ceny</h4>
+                        <p>Jakość premium w rozsądnej cenie</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                        </div>
+                        <h4>Wsparcie techniczne</h4>
+                        <p>Doradzimy w doborze odpowiednich rozwiązań</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing -->
-    <section id="cennik" class="pricing">
-        <div class="section-container">
-            <div class="section-header">
-                <p class="section-label">Twoja inwestycja w siebie</p>
-                <h2>Ile wart jest Twój czas?</h2>
-                <p class="section-desc">Jeśli zaoszczędzisz 10 godzin tygodniowo, kurs zwróci się po pierwszym miesiącu.
-                </p>
-            </div>
-            <div class="plans">
-                <div class="plan">
-                    <h3>Start</h3>
-                    <p class="plan-tagline">Pierwszy krok do wolności</p>
-                    <div class="plan-price">
-                        <span class="price">399</span>
-                        <span class="currency">zł</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>Pełny dostęp do transformacji</li>
-                        <li>Materiały do pobrania na zawsze</li>
-                        <li>Certyfikat ukończenia kursu</li>
-                        <li>Rok na zmianę swojego życia</li>
-                    </ul>
-                    <a href="#signup" class="btn-outline">Zaczynam zmianę</a>
+        <!-- Process Section -->
+        <section class="process" id="proces">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-label">Jak działamy</p>
+                    <h2 class="section-title">Proces współpracy</h2>
                 </div>
-                <div class="plan plan-featured">
-                    <div class="plan-badge">Najczęściej wybierany</div>
-                    <h3>Grow</h3>
-                    <p class="plan-tagline">Dla tych, którzy myślą o przyszłości</p>
-                    <div class="plan-price">
-                        <span class="price">699</span>
-                        <span class="currency">zł</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>Wszystko ze Start</li>
-                        <li>Dostęp na zawsze — bez limitu</li>
-                        <li>Biblioteka Automatyzacji</li>
-                        <li>Społeczność ludzi sukcesu</li>
-                        <li>Certyfikat z wyróżnieniem</li>
-                    </ul>
-                    <a href="#signup" class="btn-primary">Inwestuję w siebie</a>
-                </div>
-                <div class="plan">
-                    <h3>Master</h3>
-                    <p class="plan-tagline">Dla tych, którzy chcą wszystkiego</p>
-                    <div class="plan-price">
-                        <span class="price">1999</span>
-                        <span class="currency">zł</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>Wszystko z Grow</li>
-                        <li>4 spotkania live z grupą</li>
-                        <li>Godzina mentora tylko dla Ciebie</li>
-                        <li>Priorytetowe wsparcie VIP</li>
-                    </ul>
-                    <a href="#signup" class="btn-outline">Zostaję Masterem</a>
-                </div>
-            </div>
 
-            <!-- Comparison Table - Collapsible -->
-            <div class="comparison-wrapper">
-                <button class="comparison-toggle" id="comparison-toggle">
-                    <span>Porównaj pakiety szczegółowo</span>
-                    <span class="comparison-icon">+</span>
-                </button>
-                <div class="comparison-table" id="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Co dostajesz</th>
-                                <th>Start</th>
-                                <th>Grow</th>
-                                <th>Master</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>6-modułowy program</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td>Materiały do pobrania</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td>Certyfikat ukończenia</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td>Dostęp do kursu</td>
-                                <td>12 miesięcy</td>
-                                <td class="highlight">Na zawsze</td>
-                                <td class="highlight">Na zawsze</td>
-                            </tr>
-                            <tr>
-                                <td>Biblioteka Automatyzacji</td>
-                                <td>—</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td>Społeczność Discord</td>
-                                <td>—</td>
-                                <td>✓</td>
-                                <td>✓</td>
-                            </tr>
-                            <tr>
-                                <td>Spotkania live</td>
-                                <td>—</td>
-                                <td>—</td>
-                                <td>4 sesje</td>
-                            </tr>
-                            <tr>
-                                <td>Konsultacja 1:1 z mentorem</td>
-                                <td>—</td>
-                                <td>—</td>
-                                <td>1 godzina</td>
-                            </tr>
-                            <tr>
-                                <td>Wsparcie VIP</td>
-                                <td>—</td>
-                                <td>—</td>
-                                <td>✓</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="faq">
-        <div class="section-container">
-            <div class="section-header">
-                <p class="section-label">Masz pytania?</p>
-                <h2>Odpowiadamy</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Czy to kurs dla początkujących?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Tak! Zaczynamy od zera. Nie musisz mieć żadnego doświadczenia z AI. Prowadzimy Cię krok po
-                            kroku — od pierwszego prompta do zaawansowanych automatyzacji.</p>
+                <div class="timeline">
+                    <div class="timeline-item" data-step="1">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h4>Zapytanie ofertowe</h4>
+                            <p>Skontaktuj się z nami i opisz swoje potrzeby. Możesz wysłać zapytanie przez formularz lub
+                                zadzwonić.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Ile czasu muszę poświęcić?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Około 2-3 godziny tygodniowo. Możesz uczyć się we własnym tempie — materiały są dostępne
-                            24/7, a każda lekcja trwa 10-15 minut.</p>
+                    <div class="timeline-item" data-step="2">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h4>Wycena i projekt</h4>
+                            <p>Przygotujemy szczegółową ofertę wraz z projektem technicznym. Omawiamy wszystkie detale.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Co jeśli nie będę zadowolony?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Masz 14 dni na przetestowanie kursu. Jeśli nie zobaczysz wartości, zwrócimy Ci pieniądze —
-                            bez pytań.</p>
+                    <div class="timeline-item" data-step="3">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h4>Produkcja</h4>
+                            <p>Po akceptacji rozpoczynamy produkcję. Kontrolujemy jakość na każdym etapie.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-step="4">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h4>Dostawa</h4>
+                            <p>Dostarczamy zamówienie w ustalonym terminie. Organizujemy transport w całej Polsce.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- For Who Section -->
+        <section class="for-who" id="dla-kogo">
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-label">Dla kogo</p>
+                    <h2 class="section-title">Współpracujemy z</h2>
+                </div>
 
-    <!-- Signup -->
-    <section id="signup" class="signup">
-        <div class="signup-container">
-            <div class="signup-badge">✨ To jest ten moment</div>
-            <h2>Twoje życie za rok<br><span>zaczyna się teraz</span></h2>
-            <p class="signup-desc">
-                Dostaniesz 20 promptów, które pokażą Ci, jak wiele tracisz każdego dnia.<br>
-                <strong>Za darmo. Bez zobowiązań.</strong>
-            </p>
-            <form id="signup-form" class="signup-form">
-                <input type="email" id="email" name="email" placeholder="Twój email" required>
-                <button type="submit" class="btn-primary">Zaczynam nowe życie</button>
-            </form>
-            <p class="signup-note">Dołączysz do 847 osób, które już zaczęły swoją transformację.</p>
-        </div>
-        <div id="success-message" class="success hidden">
-            <h3>🎉 To dopiero początek!</h3>
-            <p>Sprawdź skrzynkę. Twoja przyszłość właśnie się zaczyna.</p>
-        </div>
-    </section>
+                <div class="audience-grid">
+                    <div class="audience-card">
+                        <h4>Producenci mebli</h4>
+                        <p>Dostarczamy komponenty dla linii produkcyjnych</p>
+                    </div>
+                    <div class="audience-card">
+                        <h4>Stolarze</h4>
+                        <p>Okucia dla indywidualnych projektów</p>
+                    </div>
+                    <div class="audience-card">
+                        <h4>Firmy montażowe</h4>
+                        <p>Elementy do napraw i modernizacji</p>
+                    </div>
+                    <div class="audience-card">
+                        <h4>Hurtownie meblowe</h4>
+                        <p>Regularne dostawy w atrakcyjnych cenach</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="kontakt">
+            <div class="section-container">
+                <div class="contact-wrapper">
+                    <div class="contact-form-container">
+                        <h2 class="contact-title">Porozmawiajmy<br>o Twoim projekcie</h2>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwa firmy</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefon</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Wiadomość</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="rodo" name="rodo" required>
+                                <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a
+                                        href="#">Polityką Prywatności</a></label>
+                            </div>
+                            <button type="submit" class="btn-primary btn-submit">Wyślij zapytanie</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="info-block">
+                            <h4>Adres</h4>
+                            <p>Przedsiębiorstwo Produkcyjne DAG<br>Michał Marcinkowski<br>Polska</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Kontakt</h4>
+                            <p>
+                                <a href="tel:+48123456789">+48 123 456 789</a><br>
+                                <a href="mailto:kontakt@dag.pl">kontakt@dag.pl</a>
+                            </p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Godziny pracy</h4>
+                            <p>Poniedziałek - Piątek<br>8:00 - 16:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-logo">
-                <span class="logo-icon">◆</span>
-                Savori Masterclass
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span class="logo-text">DAG</span>
+                    <p>Okucia meblowe najwyższej jakości</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Produkty</h5>
+                        <ul>
+                            <li><a href="#produkty">Listwa wzmacniająca</a></li>
+                            <li><a href="#produkty">Płytka mocująca</a></li>
+                            <li><a href="#produkty">Okucia na zamówienie</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Firma</h5>
+                        <ul>
+                            <li><a href="#o-nas">O nas</a></li>
+                            <li><a href="#proces">Proces</a></li>
+                            <li><a href="#kontakt">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Prawne</h5>
+                        <ul>
+                            <li><a href="#">Polityka prywatności</a></li>
+                            <li><a href="#">Regulamin</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p class="footer-copy">© 2025 Savori. Tworzony z pasją dla tych, którzy chcą więcej.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Przedsiębiorstwo Produkcyjne DAG. Wszystkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <h3>Dziękujemy!</h3>
+            <p>Twoje zapytanie zostało wysłane. Skontaktujemy się wkrótce.</p>
+            <button class="btn-primary" onclick="closeModal()">Zamknij</button>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

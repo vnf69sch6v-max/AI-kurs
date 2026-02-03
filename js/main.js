@@ -1,31 +1,50 @@
-// ===================================
-// Savori Masterclass - JavaScript
-// ===================================
+/* ===================================
+   DAG Furniture Hardware - JavaScript
+   =================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initStickyHeader();
     initMobileMenu();
     initSmoothScroll();
-    initAccordion();
-    initFAQ();
-    initComparisonToggle();
-    initSignupForm();
+    initCounterAnimation();
+    initScrollReveal();
+    initContactForm();
 });
 
-// Mobile Menu Toggle
+// Sticky Header
+function initStickyHeader() {
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+}
+
+// Mobile Menu
 function initMobileMenu() {
     const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-    if (toggle && navLinks) {
+    if (toggle && nav) {
         toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            nav.classList.toggle('active');
             toggle.classList.toggle('active');
         });
 
-        // Close menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
+        // Close menu on link click
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                nav.classList.remove('active');
                 toggle.classList.remove('active');
             });
         });
@@ -34,19 +53,19 @@ function initMobileMenu() {
 
 // Smooth Scroll
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
+            const targetId = link.getAttribute('href');
 
             if (targetId === '#') return;
 
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                const nav = document.querySelector('.nav');
-                const navHeight = nav ? nav.offsetHeight : 0;
-                const targetPosition = targetElement.offsetTop - navHeight - 20;
+            const target = document.querySelector(targetId);
+            if (target) {
+                const headerHeight = document.getElementById('header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight;
 
                 window.scrollTo({
                     top: targetPosition,
@@ -57,107 +76,191 @@ function initSmoothScroll() {
     });
 }
 
-// Accordion for Program
-function initAccordion() {
-    const items = document.querySelectorAll('.accordion-item');
+// Counter Animation
+function initCounterAnimation() {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200;
 
-    items.forEach(item => {
-        const header = item.querySelector('.accordion-header');
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
 
-        header.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => animateCounter(counter), 10);
+        } else {
+            counter.innerText = target;
+        }
+    };
 
-            // Close all
-            items.forEach(i => i.classList.remove('active'));
-
-            // Open clicked (if wasn't active)
-            if (!isActive) {
-                item.classList.add('active');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
             }
         });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+}
+
+// Scroll Reveal
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.timeline-item, .trust-item, .audience-card, .product-showcase, .product-custom');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    reveals.forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
     });
 }
 
-// FAQ Accordion
-function initFAQ() {
-    const items = document.querySelectorAll('.faq-item');
-
-    items.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-
-            // Close all
-            items.forEach(i => i.classList.remove('active'));
-
-            // Open clicked (if wasn't active)
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
-    });
-}
-
-// Comparison Table Toggle
-function initComparisonToggle() {
-    const toggle = document.getElementById('comparison-toggle');
-    const wrapper = toggle?.closest('.comparison-wrapper');
-
-    if (toggle && wrapper) {
-        toggle.addEventListener('click', () => {
-            wrapper.classList.toggle('active');
-        });
-    }
-}
-
-// Signup Form
-function initSignupForm() {
-    const form = document.getElementById('signup-form');
-    const successMessage = document.getElementById('success-message');
+// Contact Form
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('success-modal');
 
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const email = form.querySelector('input[type="email"]').value;
+            // Basic validation
+            const name = form.querySelector('#name');
+            const email = form.querySelector('#email');
+            const message = form.querySelector('#message');
+            const rodo = form.querySelector('#rodo');
 
-            if (!email || !isValidEmail(email)) {
-                showError('Podaj poprawny adres email.');
-                return;
+            let isValid = true;
+
+            // Clear previous errors
+            form.querySelectorAll('.error').forEach(el => el.remove());
+            form.querySelectorAll('.form-group').forEach(el => el.classList.remove('has-error'));
+
+            // Validate name
+            if (!name.value.trim()) {
+                showError(name, 'Podaj imię i nazwę firmy');
+                isValid = false;
             }
 
-            // Save
-            saveSignup({ email, timestamp: new Date().toISOString() });
+            // Validate email
+            if (!email.value.trim() || !isValidEmail(email.value)) {
+                showError(email, 'Podaj poprawny adres email');
+                isValid = false;
+            }
 
-            // Show success
-            form.parentElement.style.display = 'none';
-            successMessage.classList.remove('hidden');
+            // Validate message
+            if (!message.value.trim()) {
+                showError(message, 'Wpisz wiadomość');
+                isValid = false;
+            }
+
+            // Validate RODO
+            if (!rodo.checked) {
+                showError(rodo, 'Zaakceptuj zgodę RODO');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = form.querySelector('.btn-submit');
+                submitBtn.textContent = 'Wysyłanie...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.textContent = 'Wyślij zapytanie';
+                    submitBtn.disabled = false;
+
+                    // Show success modal
+                    if (modal) {
+                        modal.classList.add('active');
+                    }
+                }, 1500);
+            }
+        });
+
+        // Real-time validation
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                validateField(input);
+            });
+
+            input.addEventListener('input', () => {
+                const group = input.closest('.form-group') || input.closest('.checkbox-group');
+                if (group) {
+                    group.classList.remove('has-error');
+                    const error = group.querySelector('.error');
+                    if (error) error.remove();
+                }
+            });
         });
     }
 }
 
+function validateField(input) {
+    const name = input.getAttribute('name');
+    const value = input.value.trim();
+
+    switch (name) {
+        case 'email':
+            if (!isValidEmail(value)) {
+                showError(input, 'Podaj poprawny adres email');
+            }
+            break;
+        case 'name':
+            if (!value) {
+                showError(input, 'To pole jest wymagane');
+            }
+            break;
+        case 'message':
+            if (!value) {
+                showError(input, 'To pole jest wymagane');
+            }
+            break;
+    }
+}
+
+function showError(input, message) {
+    const group = input.closest('.form-group') || input.closest('.checkbox-group');
+    if (group) {
+        group.classList.add('has-error');
+
+        const existingError = group.querySelector('.error');
+        if (!existingError) {
+            const error = document.createElement('span');
+            error.className = 'error';
+            error.textContent = message;
+            error.style.cssText = 'color: #D32F2F; font-size: 13px; margin-top: 4px;';
+            group.appendChild(error);
+        }
+    }
+}
+
 function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
 }
 
-function showError(message) {
-    const existing = document.querySelector('.form-error');
-    if (existing) existing.remove();
-
-    const error = document.createElement('div');
-    error.className = 'form-error';
-    error.textContent = message;
-
-    const form = document.getElementById('signup-form');
-    form.insertBefore(error, form.firstChild);
-
-    setTimeout(() => error.remove(), 4000);
+// Close Modal
+function closeModal() {
+    const modal = document.getElementById('success-modal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
 }
 
-function saveSignup(data) {
-    const signups = JSON.parse(localStorage.getItem('savori-signups') || '[]');
-    signups.push(data);
-    localStorage.setItem('savori-signups', JSON.stringify(signups));
-    console.log('Signup saved:', data);
-}
+// Make closeModal global for onclick
+window.closeModal = closeModal;
