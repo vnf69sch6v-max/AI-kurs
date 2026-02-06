@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Płytka mocująca | DAG Okucia meblowe</title>
+    <meta name="description"
+        content="Płytka mocująca ścianę tylną - precyzyjne mocowanie tylnych ścian szafek i szuflad. Profesjonalne okucia meblowe DAG.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/product-page.css">
+</head>
+
+<body class="product-page">
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════ -->
+    <nav class="product-nav">
+        <a href="index.html" class="nav-logo">DAG</a>
+        <a href="index.html#produkty" class="nav-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Wszystkie produkty
+        </a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 1: HERO
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section section-dark-gradient hero-section" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Płytka mocująca</h1>
+            <p class="hero-tagline fade-in delay-1">Precyzja w każdym detalu</p>
+
+            <!-- Hero Product SVG -->
+            <svg class="hero-product" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="heroPlateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E8E8E8" />
+                        <stop offset="50%" style="stop-color:#D0D0D0" />
+                        <stop offset="100%" style="stop-color:#A8A8A8" />
+                    </linearGradient>
+                    <filter id="heroGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#C87941" flood-opacity="0.4" />
+                    </filter>
+                    <filter id="heroShadow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="0" dy="30" stdDeviation="25" flood-opacity="0.3" />
+                    </filter>
+                </defs>
+
+                <!-- 3D Plate with glow -->
+                <g transform="translate(200, 120)" filter="url(#heroShadow)">
+                    <g transform="rotate(-8)">
+                        <!-- Bottom edge (thickness) -->
+                        <path d="M-130,15 L130,15 L140,25 L-120,25 Z" fill="#888" />
+                        <path d="M130,15 L130,-45 L140,-35 L140,25 Z" fill="#999" />
+
+                        <!-- Top surface -->
+                        <rect x="-130" y="-45" width="260" height="60" rx="10" fill="url(#heroPlateGradient)"
+                            filter="url(#heroGlow)" />
+
+                        <!-- Center hole -->
+                        <ellipse cx="0" cy="-15" rx="18" ry="14" fill="#333" />
+                        <ellipse cx="0" cy="-15" rx="12" ry="9" fill="#1A1A1A" />
+
+                        <!-- Highlight -->
+                        <rect x="-125" y="-43" width="250" height="20" rx="8" fill="white" opacity="0.15" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Przewiń w dół</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 2: DIMENSIONS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section section-dark dimensions-section" id="dimensions">
+        <h2 class="section-title fade-in">Precyzyjne wymiary</h2>
+        <p class="section-subtitle fade-in delay-1">Każdy milimetr ma znaczenie</p>
+
+        <svg class="product-diagram fade-in delay-2" viewBox="0 0 550 350" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Premium metallic gradient -->
+                <linearGradient id="plateDimGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#E8E8E8" />
+                    <stop offset="30%" style="stop-color:#D0D0D0" />
+                    <stop offset="70%" style="stop-color:#B8B8B8" />
+                    <stop offset="100%" style="stop-color:#A0A0A0" />
+                </linearGradient>
+                <!-- Hole depth gradient -->
+                <radialGradient id="plateDimHole" cx="35%" cy="35%">
+                    <stop offset="0%" style="stop-color:#555" />
+                    <stop offset="100%" style="stop-color:#1A1A1A" />
+                </radialGradient>
+                <!-- Shadow filter -->
+                <filter id="plateDimShadow" x="-20%" y="-20%" width="140%" height="160%">
+                    <feDropShadow dx="0" dy="15" stdDeviation="15" flood-opacity="0.3" />
+                </filter>
+            </defs>
+
+            <!-- Product top view with premium styling -->
+            <g transform="translate(225, 130)" filter="url(#plateDimShadow)">
+                <g transform="rotate(-5)">
+                    <!-- 3D edge effect -->
+                    <path d="M-120,35 L120,35 L125,42 L-115,42 Z" fill="#888" />
+                    <path d="M120,35 L120,-35 L125,-30 L125,42 Z" fill="#999" />
+
+                    <!-- Plate body -->
+                    <rect x="-120" y="-35" width="240" height="70" rx="10" fill="url(#plateDimGradient)" />
+
+                    <!-- Highlight -->
+                    <rect x="-115" y="-32" width="230" height="22" rx="8" fill="white" opacity="0.2" />
+
+                    <!-- Center hole with thread texture -->
+                    <ellipse cx="0" cy="0" rx="20" ry="16" fill="url(#plateDimHole)" />
+                    <ellipse cx="0" cy="0" rx="14" ry="11" fill="#0A0A0A" />
+                    <!-- Thread lines -->
+                    <ellipse cx="0" cy="0" rx="12" ry="9" fill="none" stroke="#333" stroke-width="0.5" />
+                    <ellipse cx="0" cy="0" rx="9" ry="7" fill="none" stroke="#333" stroke-width="0.5" />
+                    <ellipse cx="0" cy="0" rx="6" ry="4" fill="none" stroke="#333" stroke-width="0.5" />
+                </g>
+            </g>
+
+            <!-- Dimension: Width (23mm) -->
+            <g class="dimension-width" transform="translate(225, 130)">
+                <g transform="rotate(-5)">
+                    <line x1="-120" y1="-55" x2="120" y2="-55" stroke="white" stroke-width="1" />
+                    <line x1="-120" y1="-62" x2="-120" y2="-48" stroke="white" stroke-width="1" />
+                    <line x1="120" y1="-62" x2="120" y2="-48" stroke="white" stroke-width="1" />
+                    <!-- Arrow markers -->
+                    <polygon points="-120,-55 -110,-52 -110,-58" fill="white" />
+                    <polygon points="120,-55 110,-52 110,-58" fill="white" />
+                    <text x="0" y="-65" text-anchor="middle" font-size="15" fill="white" font-weight="500">23 mm</text>
+                </g>
+            </g>
+
+            <!-- Dimension: Height (10mm) -->
+            <g class="dimension-height" transform="translate(225, 130)">
+                <g transform="rotate(-5)">
+                    <line x1="150" y1="-35" x2="150" y2="35" stroke="white" stroke-width="1" />
+                    <line x1="143" y1="-35" x2="157" y2="-35" stroke="white" stroke-width="1" />
+                    <line x1="143" y1="35" x2="157" y2="35" stroke="white" stroke-width="1" />
+                    <!-- Arrow markers -->
+                    <polygon points="150,-35 147,-25 153,-25" fill="white" />
+                    <polygon points="150,35 147,25 153,25" fill="white" />
+                    <text x="175" y="5" font-size="15" fill="white" font-weight="500">10 mm</text>
+                </g>
+            </g>
+
+            <!-- Dimension: Thread (M3) with copper accent -->
+            <g class="dimension-hole" transform="translate(225, 130)">
+                <g transform="rotate(-5)">
+                    <line x1="20" y1="0" x2="80" y2="-35" stroke="#C87941" stroke-width="1.5" stroke-dasharray="4,2" />
+                    <circle cx="80" cy="-35" r="18" fill="none" stroke="#C87941" stroke-width="1.5" />
+                    <text x="80" y="-30" text-anchor="middle" font-size="14" fill="#C87941" font-weight="700">M3</text>
+                </g>
+            </g>
+
+            <!-- Side profile view -->
+            <g transform="translate(225, 280)" filter="url(#plateDimShadow)">
+                <!-- 3D edge -->
+                <path d="M-120,6 L120,6 L125,10 L-115,10 Z" fill="#888" />
+                <path d="M120,6 L120,-6 L125,-3 L125,10 Z" fill="#999" />
+                <!-- Profile body -->
+                <rect x="-120" y="-6" width="240" height="12" rx="3" fill="url(#plateDimGradient)" />
+                <rect x="-115" y="-4" width="230" height="4" rx="2" fill="white" opacity="0.15" />
+            </g>
+
+            <!-- Dimension: Thickness (0.75mm) -->
+            <g class="dimension-thickness" transform="translate(225, 280)">
+                <line x1="145" y1="-6" x2="145" y2="6" stroke="white" stroke-width="1" />
+                <line x1="138" y1="-6" x2="152" y2="-6" stroke="white" stroke-width="1" />
+                <line x1="138" y1="6" x2="152" y2="6" stroke="white" stroke-width="1" />
+                <text x="170" y="5" font-size="13" fill="white" font-weight="500">0.75 mm</text>
+            </g>
+
+            <!-- Material label -->
+            <text x="275" y="330" text-anchor="middle" font-size="12" fill="#666" letter-spacing="0.05em">STAL
+                OCYNKOWANA</text>
+        </svg>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 3: PROBLEM
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section section-dark problem-section" id="problem">
+        <div class="problem-content">
+            <div class="problem-visual fade-in-left">
+                <svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cabinet outline -->
+                    <rect x="50" y="50" width="300" height="250" rx="8" fill="none" stroke="#444" stroke-width="2" />
+
+                    <!-- Shelves -->
+                    <line x1="50" y1="150" x2="350" y2="150" stroke="#444" stroke-width="2" />
+                    <line x1="50" y1="200" x2="350" y2="200" stroke="#444" stroke-width="2" />
+
+                    <!-- Loose back panel with shake animation -->
+                    <g class="unstable-element error-glow">
+                        <rect x="340" y="60" width="8" height="230" fill="#666" />
+                        <!-- Gap indicator -->
+                        <rect x="348" y="100" width="15" height="3" fill="#FF3B30" />
+                        <rect x="348" y="180" width="12" height="3" fill="#FF3B30" />
+                        <rect x="348" y="250" width="18" height="3" fill="#FF3B30" />
+                    </g>
+
+                    <!-- Red warning marks -->
+                    <circle cx="360" cy="100" r="15" fill="#FF3B30" opacity="0.3" />
+                    <text x="360" y="105" text-anchor="middle" fill="#FF3B30" font-size="16" font-weight="bold">!</text>
+                </svg>
+            </div>
+
+            <div class="problem-text fade-in-right">
+                <h2 class="section-title" style="text-align: left; color: #FF3B30;">Problem</h2>
+                <p class="body-text">
+                    Tradycyjne mocowanie tylnych ścian nie zapewnia wystarczającej stabilności.
+                    Z czasem ściany obluzowują się, mebel traci sztywność i zaczyna skrzypieć.
+                </p>
+                <ul class="body-text" style="margin-top: 24px; list-style: none;">
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: #FF3B30; font-size: 20px;">✗</span>
+                        Utrata stabilności konstrukcji
+                    </li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: #FF3B30; font-size: 20px;">✗</span>
+                        Nieprzyjemne skrzypienie
+                    </li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: #FF3B30; font-size: 20px;">✗</span>
+                        Skrócona żywotność mebla
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 4: SOLUTION
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section solution-section" id="solution">
+        <h2 class="section-title fade-in" style="color: var(--text-dark);">Rozwiązanie</h2>
+        <p class="section-subtitle fade-in delay-1">Płytka mocująca DAG</p>
+
+        <svg class="exploded-view fade-in delay-2" viewBox="0 0 650 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="copperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#D4935A" />
+                    <stop offset="50%" style="stop-color:#C87941" />
+                    <stop offset="100%" style="stop-color:#A05A2C" />
+                </linearGradient>
+            </defs>
+
+            <!-- Cabinet frame -->
+            <g class="exploded-part" style="transform: translate(0, 0);">
+                <rect x="150" y="100" width="300" height="200" rx="6" fill="none" stroke="#1D1D1F" stroke-width="2" />
+                <text x="300" y="205" text-anchor="middle" fill="#555" font-size="12">Korpus mebla</text>
+            </g>
+
+            <!-- Back panel -->
+            <g class="exploded-part" style="transform: translate(80px, 0);">
+                <rect x="440" y="110" width="8" height="180" fill="#888" stroke="#666" />
+                <text x="460" y="205" fill="#555" font-size="11">Tylna ściana</text>
+            </g>
+
+            <!-- Mounting plates (4x) - HIGHLIGHTED -->
+            <g class="exploded-part product-highlight" style="transform: translate(-60px, -30px);">
+                <rect x="110" y="90" width="30" height="15" rx="3" fill="url(#copperGradient)" />
+                <circle cx="125" cy="97" r="3" fill="#333" />
+            </g>
+            <g class="exploded-part product-highlight" style="transform: translate(-60px, 30px);">
+                <rect x="110" y="285" width="30" height="15" rx="3" fill="url(#copperGradient)" />
+                <circle cx="125" cy="292" r="3" fill="#333" />
+            </g>
+            <g class="exploded-part product-highlight" style="transform: translate(60px, -30px);">
+                <rect x="460" y="90" width="30" height="15" rx="3" fill="url(#copperGradient)" />
+                <circle cx="475" cy="97" r="3" fill="#333" />
+            </g>
+            <g class="exploded-part product-highlight" style="transform: translate(60px, 30px);">
+                <rect x="460" y="285" width="30" height="15" rx="3" fill="url(#copperGradient)" />
+                <circle cx="475" cy="292" r="3" fill="#333" />
+            </g>
+
+            <!-- Assembly arrows -->
+            <g fill="none" stroke="#C87941" stroke-width="2" opacity="0.7">
+                <path d="M100 100 L140 100" marker-end="url(#arrowCopper)" />
+                <path d="M100 290 L140 290" marker-end="url(#arrowCopper)" />
+                <path d="M520 100 L480 100" marker-end="url(#arrowCopper)" />
+                <path d="M520 290 L480 290" marker-end="url(#arrowCopper)" />
+            </g>
+
+            <defs>
+                <marker id="arrowCopper" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#C87941" />
+                </marker>
+            </defs>
+        </svg>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 5: HOW IT WORKS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section section-light-alt" id="how-it-works">
+        <h2 class="section-title fade-in">Jak to działa?</h2>
+        <p class="section-subtitle fade-in delay-1">Montaż w 4 prostych krokach</p>
+
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Przykręć płytkę</h3>
+                <p class="step-description">Zamontuj płytkę do korpusu mebla za pomocą wkrętu</p>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Wsuń tylną ścianę</h3>
+                <p class="step-description">Wsuń tylną ścianę w rowek płytki mocującej</p>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Dokręć wkręt</h3>
+                <p class="step-description">Dokręć wkręt blokujący, aby zabezpieczyć ścianę</p>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h3 class="step-title">Gotowe!</h3>
+                <p class="step-description">Solidne mocowanie na lata bezproblemowej eksploatacji</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 6: BEFORE/AFTER COMPARISON
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section comparison-section" id="comparison">
+        <!-- Before side (dark) -->
+        <div class="comparison-side comparison-before">
+            <div class="comparison-icon">✗</div>
+            <h3 class="comparison-title">Bez płytek DAG</h3>
+
+            <svg class="comparison-visual" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Wobbly cabinet -->
+                <g transform="rotate(2, 100, 100)">
+                    <rect x="30" y="30" width="140" height="140" rx="4" fill="none" stroke="#666" stroke-width="2"
+                        stroke-dasharray="5,3" />
+                    <rect x="165" y="40" width="4" height="120" fill="#666" opacity="0.5" />
+                    <!-- Gap lines -->
+                    <line x1="169" y1="70" x2="180" y2="70" stroke="#FF3B30" stroke-width="2" />
+                    <line x1="169" y1="110" x2="185" y2="110" stroke="#FF3B30" stroke-width="2" />
+                    <line x1="169" y1="150" x2="182" y2="150" stroke="#FF3B30" stroke-width="2" />
+                </g>
+            </svg>
+
+            <p class="comparison-description">Niestabilność, skrzypienie, krótka żywotność mebla</p>
+        </div>
+
+        <!-- After side (light) -->
+        <div class="comparison-side comparison-after">
+            <div class="comparison-icon">✓</div>
+            <h3 class="comparison-title">Z płytkami DAG</h3>
+
+            <svg class="comparison-visual" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Solid cabinet -->
+                <rect x="30" y="30" width="140" height="140" rx="4" fill="none" stroke="#1D1D1F" stroke-width="2" />
+                <rect x="165" y="35" width="4" height="130" fill="#666" />
+                <!-- Mounting plates -->
+                <rect x="160" y="45" width="12" height="8" rx="2" fill="#C87941" />
+                <rect x="160" y="147" width="12" height="8" rx="2" fill="#C87941" />
+                <!-- Checkmarks -->
+                <circle cx="172" cy="49" r="8" fill="#34C759" opacity="0.3" />
+                <circle cx="172" cy="151" r="8" fill="#34C759" opacity="0.3" />
+            </svg>
+
+            <p class="comparison-description">Sztywność, trwałość, profesjonalna jakość wykonania</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 7: SPECIFICATIONS
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section section-light specs-section" id="specs">
+        <div class="specs-content">
+            <svg class="specs-product fade-in-left" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="specPlateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#F0F0F0" />
+                        <stop offset="100%" style="stop-color:#C8C8C8" />
+                    </linearGradient>
+                    <filter id="specShadow">
+                        <feDropShadow dx="0" dy="15" stdDeviation="20" flood-opacity="0.15" />
+                    </filter>
+                </defs>
+                <g transform="translate(150, 100)" filter="url(#specShadow)">
+                    <g transform="rotate(-5)">
+                        <rect x="-100" y="-35" width="200" height="50" rx="8" fill="url(#specPlateGrad)" />
+                        <ellipse cx="0" cy="-10" rx="15" ry="12" fill="#555" />
+                        <ellipse cx="0" cy="-10" rx="10" ry="8" fill="#333" />
+                        <path d="M-95,-33 L95,-33 L95,-20 L-95,-20 Z" fill="white" opacity="0.2" />
+                    </g>
+                </g>
+            </svg>
+
+            <div class="specs-list-container fade-in-right">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 40px;">Specyfikacja</h2>
+                <ul class="specs-list">
+                    <li>
+                        <span class="spec-name">Wymiary</span>
+                        <span class="spec-dots"></span>
+                        <span class="spec-value">23 × 10 × 0.75 mm</span>
+                    </li>
+                    <li>
+                        <span class="spec-name">Materiał</span>
+                        <span class="spec-dots"></span>
+                        <span class="spec-value">Stal ocynkowana</span>
+                    </li>
+                    <li>
+                        <span class="spec-name">Gwint</span>
+                        <span class="spec-dots"></span>
+                        <span class="spec-value">M3</span>
+                    </li>
+                    <li>
+                        <span class="spec-name">Waga</span>
+                        <span class="spec-dots"></span>
+                        <span class="spec-value">~2.8 g</span>
+                    </li>
+                    <li>
+                        <span class="spec-name">Pakowanie</span>
+                        <span class="spec-dots"></span>
+                        <span class="spec-value">100 / 500 / 1000 szt.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SECTION 8: CTA
+         ═══════════════════════════════════════════════════════════════ -->
+    <section class="product-section section-dark cta-section" id="cta">
+        <div class="cta-content">
+            <svg class="cta-product fade-in" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="ctaGlow">
+                        <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#C87941" flood-opacity="0.5" />
+                    </filter>
+                </defs>
+                <g transform="translate(100, 60)" filter="url(#ctaGlow)">
+                    <rect x="-70" y="-25" width="140" height="35" rx="6" fill="#D0D0D0" />
+                    <ellipse cx="0" cy="-8" rx="12" ry="10" fill="#333" />
+                </g>
+            </svg>
+
+            <h2 class="hero-title fade-in delay-1">Gotowy na upgrade?</h2>
+            <p class="hero-tagline fade-in delay-2">Zamów próbki lub zapytaj o wycenę hurtową</p>
+
+            <div class="cta-buttons fade-in delay-3">
+                <a href="index.html#kontakt" class="btn-primary-light">Zamów próbki</a>
+                <a href="index.html#kontakt" class="btn-outline-light">Zapytaj o cenę</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/product-animations.js"></script>
+</body>
+
+</html>

@@ -35,6 +35,9 @@
 </head>
 
 <body>
+    <!-- Skip link for keyboard accessibility -->
+    <a href="#main-content" class="skip-link">Przejdź do treści</a>
+
     <!-- Header -->
     <header class="header" id="header">
         <div class="header-container">
@@ -58,7 +61,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="hero-content">
@@ -85,21 +88,29 @@
 
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <span class="stat-number" data-target="15">0</span>
+                        <div class="stat-value">
+                            <span class="stat-number" data-target="15">0</span>
+                        </div>
                         <span class="stat-label">lat doświadczenia</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-target="5000">0</span>
-                        <span class="stat-suffix">+</span>
+                        <div class="stat-value">
+                            <span class="stat-number" data-target="5000">0</span>
+                            <span class="stat-suffix">+</span>
+                        </div>
                         <span class="stat-label">zrealizowanych zamówień</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-target="120">0</span>
+                        <div class="stat-value">
+                            <span class="stat-number" data-target="120">0</span>
+                        </div>
                         <span class="stat-label">partnerów handlowych</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-target="50">0</span>
-                        <span class="stat-suffix">+</span>
+                        <div class="stat-value">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-suffix">+</span>
+                        </div>
                         <span class="stat-label">wariantów produktów</span>
                     </div>
                 </div>
@@ -117,7 +128,33 @@
                 <!-- Product 1: Listwa -->
                 <div class="product-showcase">
                     <div class="product-image">
-                        <div class="product-placeholder listwa"></div>
+                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="homepageBarGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#D0D0D0" />
+                                    <stop offset="50%" style="stop-color:#A0A0A0" />
+                                    <stop offset="100%" style="stop-color:#707070" />
+                                </linearGradient>
+                                <filter id="homepageShadow" x="-20%" y="-20%" width="140%" height="160%">
+                                    <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.15" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(200, 100)" filter="url(#homepageShadow)">
+                                <g transform="rotate(-5)">
+                                    <!-- Bar body -->
+                                    <rect x="-160" y="-12" width="320" height="24" rx="4"
+                                        fill="url(#homepageBarGradient)" />
+                                    <!-- Channel -->
+                                    <rect x="-150" y="-5" width="300" height="10" rx="2" fill="#555" />
+                                    <!-- Highlight -->
+                                    <rect x="-155" y="-10" width="310" height="8" rx="2" fill="white" opacity="0.2" />
+                                    <!-- Mounting holes -->
+                                    <circle cx="-130" cy="0" r="4" fill="#333" />
+                                    <circle cx="0" cy="0" r="4" fill="#333" />
+                                    <circle cx="130" cy="0" r="4" fill="#333" />
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Listwa wzmacniająca</h3>
@@ -130,8 +167,7 @@
                             <li>Dostępna w różnych długościach</li>
                         </ul>
                         <div class="product-buttons">
-                            <button class="btn-primary" onclick="openProductModal('listwa')">Zobacz
-                                zastosowanie</button>
+                            <a href="listwa.html" class="btn-primary">Zobacz produkt</a>
                             <a href="#kontakt" class="btn-outline">Zapytaj o cenę</a>
                         </div>
                     </div>
@@ -140,7 +176,38 @@
                 <!-- Product 2: Płytka -->
                 <div class="product-showcase reverse">
                     <div class="product-image">
-                        <div class="product-placeholder plytka"></div>
+                        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="homepagePlateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#E8E8E8" />
+                                    <stop offset="50%" style="stop-color:#C0C0C0" />
+                                    <stop offset="100%" style="stop-color:#909090" />
+                                </linearGradient>
+                                <filter id="homepagePlateShadow" x="-30%" y="-30%" width="160%" height="180%">
+                                    <feDropShadow dx="0" dy="15" stdDeviation="20" flood-opacity="0.2" />
+                                </filter>
+                            </defs>
+                            <g transform="translate(200, 130)" filter="url(#homepagePlateShadow)">
+                                <g transform="rotate(-8)">
+                                    <!-- 3D edge -->
+                                    <path d="M-90,10 L90,10 L95,18 L-85,18 Z" fill="#808080" />
+                                    <path d="M90,10 L90,-30 L95,-24 L95,18 Z" fill="#909090" />
+                                    <!-- Main plate -->
+                                    <rect x="-90" y="-30" width="180" height="40" rx="8"
+                                        fill="url(#homepagePlateGradient)" />
+                                    <!-- Highlight -->
+                                    <rect x="-85" y="-28" width="170" height="15" rx="6" fill="white" opacity="0.25" />
+                                    <!-- Center hole with thread -->
+                                    <ellipse cx="0" cy="-10" rx="14" ry="11" fill="#3A3A3A" />
+                                    <ellipse cx="0" cy="-10" rx="10" ry="8" fill="#1A1A1A" />
+                                    <!-- Thread circles -->
+                                    <ellipse cx="0" cy="-10" rx="8" ry="6" fill="none" stroke="#333"
+                                        stroke-width="0.5" />
+                                    <ellipse cx="0" cy="-10" rx="6" ry="4" fill="none" stroke="#333"
+                                        stroke-width="0.5" />
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                     <div class="product-content">
                         <h3 class="product-title">Płytka mocująca ścianę tylną</h3>
@@ -152,8 +219,7 @@
                             <li>Estetyczne wykończenie</li>
                         </ul>
                         <div class="product-buttons">
-                            <button class="btn-primary" onclick="openProductModal('plytka')">Zobacz
-                                zastosowanie</button>
+                            <a href="plytka.html" class="btn-primary">Zobacz produkt</a>
                             <a href="#kontakt" class="btn-outline">Zapytaj o cenę</a>
                         </div>
                     </div>
@@ -386,8 +452,8 @@
                     <div class="footer-col">
                         <h5>Produkty</h5>
                         <ul>
-                            <li><a href="#produkty">Listwa wzmacniająca</a></li>
-                            <li><a href="#produkty">Płytka mocująca</a></li>
+                            <li><a href="listwa.html">Listwa wzmacniająca</a></li>
+                            <li><a href="plytka.html">Płytka mocująca</a></li>
                             <li><a href="#produkty">Okucia na zamówienie</a></li>
                         </ul>
                     </div>
@@ -427,61 +493,105 @@
             <div class="modal-header">
                 <div class="modal-badge">Płytka mocująca</div>
                 <h2>Płytka mocująca ścianę tylną</h2>
-                <p class="modal-dimensions">23 × 25 × 2.5 mm</p>
+                <p class="modal-dimensions">23 × 10 × 0.75 mm | Gwint M3</p>
             </div>
 
             <div class="modal-body">
                 <div class="modal-diagram">
-                    <svg viewBox="0 0 400 300" class="exploded-view">
-                        <!-- Cabinet Body (Isometric) -->
-                        <g class="cabinet-body">
-                            <path d="M100,200 L100,80 L180,40 L260,80 L260,200 L180,240 L100,200" fill="#E8E8E8"
-                                stroke="#CCCCCC" stroke-width="1.5" />
-                            <path d="M180,40 L180,160 L100,200 M180,160 L260,200" fill="none" stroke="#CCCCCC"
-                                stroke-width="1" />
-                            <!-- Corner marks for plates -->
-                            <circle cx="115" cy="90" r="4" fill="#C87941" class="hotspot pulse" />
-                            <circle cx="245" cy="90" r="4" fill="#C87941" class="hotspot pulse" />
-                            <circle cx="115" cy="185" r="4" fill="#C87941" class="hotspot pulse" />
-                            <circle cx="245" cy="185" r="4" fill="#C87941" class="hotspot pulse" />
-                        </g>
-
-                        <!-- Back Panel (Offset) -->
-                        <g class="back-panel" transform="translate(40, -20)">
-                            <path d="M100,200 L100,80 L180,40 L180,160 L100,200" fill="#FFFFFF" stroke="#DDDDDD"
-                                stroke-width="1.5" />
-                            <text x="140" y="120" font-size="10" fill="#86868B" text-anchor="middle">Tylna ściana</text>
-                        </g>
-
-                        <!-- Mounting Plates -->
-                        <g class="mounting-plates">
-                            <rect x="280" y="60" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
-                                stroke-width="1" />
-                            <rect x="280" y="90" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
-                                stroke-width="1" />
-                            <rect x="280" y="120" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
-                                stroke-width="1" />
-                            <rect x="280" y="150" width="20" height="18" rx="2" fill="#C87941" stroke="#A05A2C"
-                                stroke-width="1" />
-                            <text x="290" y="185" font-size="9" fill="#86868B" text-anchor="middle">4× płytka</text>
-                        </g>
-
-                        <!-- Assembly Arrows -->
-                        <g class="arrows" stroke="#86868B" stroke-width="1" stroke-dasharray="4 2" fill="none">
-                            <path d="M270,75 L240,85" marker-end="url(#arrowhead)" />
-                            <path d="M270,105 L240,115" marker-end="url(#arrowhead)" />
-                            <path d="M175,70 L155,90" marker-end="url(#arrowhead)" />
-                        </g>
-
-                        <!-- Arrow marker -->
+                    <svg viewBox="0 0 600 400" class="exploded-view">
                         <defs>
-                            <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                                <path d="M0,0 L6,3 L0,6 Z" fill="#86868B" />
-                            </marker>
+                            <!-- Premium gradient for product -->
+                            <linearGradient id="plateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5F5F5" />
+                                <stop offset="40%" style="stop-color:#E8E8E8" />
+                                <stop offset="100%" style="stop-color:#D0D0D0" />
+                            </linearGradient>
+                            <!-- Soft shadow filter -->
+                            <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feDropShadow dx="0" dy="25" stdDeviation="20" flood-opacity="0.15" />
+                            </filter>
+                            <!-- Reflection gradient -->
+                            <linearGradient id="reflection" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
+                                <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+                            </linearGradient>
+                            <!-- Hole depth gradient -->
+                            <radialGradient id="holeDepth" cx="40%" cy="40%">
+                                <stop offset="0%" style="stop-color:#4A4A4A" />
+                                <stop offset="100%" style="stop-color:#1A1A1A" />
+                            </radialGradient>
                         </defs>
 
-                        <!-- Labels -->
-                        <text x="320" y="40" font-size="11" fill="#1D1D1F" font-weight="500">Schemat montażu</text>
+                        <!-- HERO PRODUCT - Large 3D Plate -->
+                        <g transform="translate(300, 180)">
+                            <!-- Main plate body with shadow -->
+                            <g filter="url(#softShadow)">
+                                <!-- 3D perspective plate -->
+                                <g transform="rotate(-8)">
+                                    <!-- Bottom edge (thickness) -->
+                                    <path d="M-150,12 L150,12 L160,20 L-140,20 Z" fill="#A0A0A0" />
+                                    <path d="M150,12 L150,-50 L160,-42 L160,20 Z" fill="#B8B8B8" />
+
+                                    <!-- Top surface -->
+                                    <rect x="-150" y="-50" width="300" height="62" rx="12" fill="url(#plateGradient)"
+                                        stroke="#C8C8C8" stroke-width="0.5" />
+
+                                    <!-- Reflection highlight -->
+                                    <rect x="-145" y="-48" width="290" height="25" rx="10" fill="url(#reflection)" />
+
+                                    <!-- Center threaded hole -->
+                                    <ellipse cx="0" cy="-20" rx="22" ry="18" fill="url(#holeDepth)" />
+                                    <ellipse cx="0" cy="-20" rx="16" ry="13" fill="#0A0A0A" />
+                                    <!-- Thread lines inside hole -->
+                                    <ellipse cx="0" cy="-20" rx="14" ry="11" fill="none" stroke="#333"
+                                        stroke-width="0.5" />
+                                    <ellipse cx="0" cy="-20" rx="11" ry="8" fill="none" stroke="#333"
+                                        stroke-width="0.5" />
+                                    <ellipse cx="0" cy="-20" rx="8" ry="5" fill="none" stroke="#333"
+                                        stroke-width="0.5" />
+                                </g>
+                            </g>
+                        </g>
+
+                        <!-- Floating spec badges - Apple style -->
+                        <g class="spec-badges" font-family="Inter, -apple-system, sans-serif">
+                            <!-- Dimension badge - left -->
+                            <g transform="translate(80, 140)">
+                                <rect x="0" y="0" width="90" height="70" rx="16" fill="white" filter="url(#softShadow)"
+                                    opacity="0.95" />
+                                <text x="45" y="28" font-size="24" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="600">23</text>
+                                <text x="45" y="48" font-size="12" fill="#86868B" text-anchor="middle">× 10 mm</text>
+                            </g>
+
+                            <!-- Thickness badge - bottom left -->
+                            <g transform="translate(80, 280)">
+                                <rect x="0" y="0" width="90" height="60" rx="16" fill="white" filter="url(#softShadow)"
+                                    opacity="0.95" />
+                                <text x="45" y="26" font-size="18" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="600">0.75</text>
+                                <text x="45" y="44" font-size="11" fill="#86868B" text-anchor="middle">mm grubość</text>
+                            </g>
+
+                            <!-- Thread badge - right -->
+                            <g transform="translate(430, 180)">
+                                <rect x="0" y="0" width="90" height="70" rx="16" fill="white" filter="url(#softShadow)"
+                                    opacity="0.95" />
+                                <text x="45" y="30" font-size="22" fill="#C87941" text-anchor="middle"
+                                    font-weight="700">M3</text>
+                                <text x="45" y="50" font-size="11" fill="#86868B" text-anchor="middle">gwint
+                                    metryczny</text>
+                            </g>
+
+                            <!-- Material badge - bottom right -->
+                            <g transform="translate(430, 290)">
+                                <rect x="0" y="0" width="100" height="60" rx="16" fill="white" filter="url(#softShadow)"
+                                    opacity="0.95" />
+                                <text x="50" y="26" font-size="11" fill="#86868B" text-anchor="middle">Materiał</text>
+                                <text x="50" y="44" font-size="12" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="500">Stal ocynk.</text>
+                            </g>
+                        </g>
                     </svg>
                 </div>
 
@@ -511,7 +621,7 @@
                         <table class="specs-table">
                             <tr>
                                 <td>Wymiary</td>
-                                <td>23 × 25 × 2.5 mm</td>
+                                <td>23 × 10 × 0.75 mm</td>
                             </tr>
                             <tr>
                                 <td>Materiał</td>
@@ -552,64 +662,127 @@
 
             <div class="modal-body">
                 <div class="modal-diagram">
-                    <svg viewBox="0 0 400 300" class="exploded-view">
-                        <!-- Before/After comparison -->
-
-                        <!-- BEFORE: Drawer without reinforcement -->
-                        <g class="before-state">
-                            <text x="100" y="30" font-size="12" fill="#D32F2F" font-weight="500">Bez listwy</text>
-                            <!-- Drawer sides -->
-                            <rect x="30" y="50" width="140" height="100" fill="none" stroke="#CCCCCC" stroke-width="2"
-                                rx="2" />
-                            <!-- Bent bottom (problem) -->
-                            <path d="M30,130 Q100,160 170,130" fill="none" stroke="#86868B" stroke-width="2" />
-                            <!-- Weight arrow -->
-                            <path d="M100,80 L100,110" stroke="#D32F2F" stroke-width="2" marker-end="url(#arrowRed)" />
-                            <text x="100" y="70" font-size="9" fill="#D32F2F" text-anchor="middle">Obciążenie</text>
-                            <!-- Problem indicator -->
-                            <path d="M85,150 Q100,165 115,150" fill="none" stroke="#D32F2F" stroke-width="1"
-                                stroke-dasharray="3 2" />
-                            <text x="100" y="180" font-size="9" fill="#D32F2F" text-anchor="middle">Ugięcie dna</text>
-                        </g>
-
-                        <!-- AFTER: Drawer with reinforcement -->
-                        <g class="after-state" transform="translate(200, 0)">
-                            <text x="100" y="30" font-size="12" fill="#4CAF50" font-weight="500">Z listwą DAG</text>
-                            <!-- Drawer sides -->
-                            <rect x="30" y="50" width="140" height="100" fill="none" stroke="#CCCCCC" stroke-width="2"
-                                rx="2" />
-                            <!-- Straight bottom (solution) -->
-                            <line x1="30" y1="130" x2="170" y2="130" stroke="#86868B" stroke-width="2" />
-                            <!-- Reinforcement bar -->
-                            <rect x="40" y="135" width="120" height="8" rx="2" fill="#C87941" stroke="#A05A2C"
-                                stroke-width="1" />
-                            <text x="100" y="160" font-size="8" fill="#C87941" font-weight="500"
-                                text-anchor="middle">LISTWA DAG</text>
-                            <!-- Weight arrow -->
-                            <path d="M100,80 L100,110" stroke="#4CAF50" stroke-width="2"
-                                marker-end="url(#arrowGreen)" />
-                            <!-- Checkmark -->
-                            <circle cx="100" cy="180" r="12" fill="#4CAF50" />
-                            <path d="M94,180 L98,184 L106,176" stroke="white" stroke-width="2" fill="none" />
-                        </g>
-
-                        <!-- Arrow markers -->
+                    <svg viewBox="0 0 650 380" class="exploded-view">
                         <defs>
-                            <marker id="arrowRed" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                                <path d="M0,0 L6,3 L0,6 Z" fill="#D32F2F" />
-                            </marker>
-                            <marker id="arrowGreen" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                                <path d="M0,0 L6,3 L0,6 Z" fill="#4CAF50" />
-                            </marker>
+                            <!-- Premium gradient for C-profile bar -->
+                            <linearGradient id="barGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F0F0F0" />
+                                <stop offset="30%" style="stop-color:#E0E0E0" />
+                                <stop offset="100%" style="stop-color:#C8C8C8" />
+                            </linearGradient>
+                            <!-- Shadow filter -->
+                            <filter id="barShadow" x="-20%" y="-20%" width="140%" height="160%">
+                                <feDropShadow dx="0" dy="20" stdDeviation="18" flood-opacity="0.12" />
+                            </filter>
+                            <!-- Highlight gradient -->
+                            <linearGradient id="barHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.7" />
+                                <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+                            </linearGradient>
+                            <!-- Inner channel gradient -->
+                            <linearGradient id="channelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#D8D8D8" />
+                                <stop offset="100%" style="stop-color:#A8A8A8" />
+                            </linearGradient>
                         </defs>
 
-                        <!-- Center divider -->
-                        <line x1="200" y1="40" x2="200" y2="200" stroke="#E8E8E8" stroke-width="1"
-                            stroke-dasharray="4 4" />
+                        <!-- HERO PRODUCT - C-Profile Bar -->
+                        <g transform="translate(325, 140)">
+                            <g filter="url(#barShadow)">
+                                <!-- 3D perspective bar - slight rotation -->
+                                <g transform="rotate(-3)">
+                                    <!-- Bottom edge (thickness) -->
+                                    <path d="M-280,18 L280,18 L283,25 L-277,25 Z" fill="#A8A8A8" />
+                                    <path d="M280,18 L280,-18 L283,-14 L283,25 Z" fill="#B8B8B8" />
 
-                        <!-- Labels -->
-                        <text x="200" y="230" font-size="11" fill="#1D1D1F" font-weight="500"
-                            text-anchor="middle">Porównanie: przed i po montażu</text>
+                                    <!-- Main bar body -->
+                                    <rect x="-280" y="-18" width="560" height="36" rx="8" fill="url(#barGradient)"
+                                        stroke="#C0C0C0" stroke-width="0.5" />
+
+                                    <!-- C-profile inner channel -->
+                                    <rect x="-270" y="-10" width="540" height="20" rx="4"
+                                        fill="url(#channelGradient)" />
+
+                                    <!-- Highlight reflection -->
+                                    <rect x="-275" y="-16" width="550" height="12" rx="6" fill="url(#barHighlight)" />
+
+                                    <!-- Mounting holes with depth -->
+                                    <g fill="#555">
+                                        <ellipse cx="-220" cy="0" rx="8" ry="6" />
+                                        <ellipse cx="-110" cy="0" rx="8" ry="6" />
+                                        <ellipse cx="0" cy="0" rx="8" ry="6" />
+                                        <ellipse cx="110" cy="0" rx="8" ry="6" />
+                                        <ellipse cx="220" cy="0" rx="8" ry="6" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+
+                        <!-- Floating spec badges - Apple style -->
+                        <g class="spec-badges" font-family="Inter, -apple-system, sans-serif">
+                            <!-- Length badge - left -->
+                            <g transform="translate(40, 90)">
+                                <rect x="0" y="0" width="100" height="70" rx="16" fill="white" filter="url(#barShadow)"
+                                    opacity="0.95" />
+                                <text x="50" y="28" font-size="26" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="600">351</text>
+                                <text x="50" y="50" font-size="12" fill="#86868B" text-anchor="middle">mm długość</text>
+                            </g>
+
+                            <!-- Profile badge - right top -->
+                            <g transform="translate(510, 90)">
+                                <rect x="0" y="0" width="100" height="70" rx="16" fill="white" filter="url(#barShadow)"
+                                    opacity="0.95" />
+                                <text x="50" y="30" font-size="18" fill="#C87941" text-anchor="middle"
+                                    font-weight="700">Profil C</text>
+                                <text x="50" y="50" font-size="11" fill="#86868B" text-anchor="middle">wzmocniony</text>
+                            </g>
+
+                            <!-- Material badge - left bottom -->
+                            <g transform="translate(40, 280)">
+                                <rect x="0" y="0" width="100" height="60" rx="16" fill="white" filter="url(#barShadow)"
+                                    opacity="0.95" />
+                                <text x="50" y="24" font-size="11" fill="#86868B" text-anchor="middle">Materiał</text>
+                                <text x="50" y="44" font-size="12" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="500">Stal ocynk.</text>
+                            </g>
+
+                            <!-- Holes badge - right bottom -->
+                            <g transform="translate(510, 280)">
+                                <rect x="0" y="0" width="100" height="60" rx="16" fill="white" filter="url(#barShadow)"
+                                    opacity="0.95" />
+                                <text x="50" y="24" font-size="11" fill="#86868B" text-anchor="middle">Otwory</text>
+                                <text x="50" y="44" font-size="13" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="600">Ø3.5 / Ø5.5</text>
+                            </g>
+                        </g>
+
+                        <!-- Variants selector - Apple style pills -->
+                        <g transform="translate(170, 220)">
+                            <text x="155" y="0" font-size="13" fill="#86868B" text-anchor="middle"
+                                font-weight="500">Dostępne długości</text>
+                            <g transform="translate(0, 20)">
+                                <rect x="0" y="0" width="70" height="36" rx="18" fill="#F5F5F7" stroke="#E0E0E0"
+                                    stroke-width="1" />
+                                <text x="35" y="24" font-size="14" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="500">300</text>
+
+                                <rect x="80" y="0" width="70" height="36" rx="18" fill="#C87941" />
+                                <text x="115" y="24" font-size="14" fill="white" text-anchor="middle"
+                                    font-weight="600">400</text>
+
+                                <rect x="160" y="0" width="70" height="36" rx="18" fill="#F5F5F7" stroke="#E0E0E0"
+                                    stroke-width="1" />
+                                <text x="195" y="24" font-size="14" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="500">500</text>
+
+                                <rect x="240" y="0" width="70" height="36" rx="18" fill="#F5F5F7" stroke="#E0E0E0"
+                                    stroke-width="1" />
+                                <text x="275" y="24" font-size="14" fill="#1D1D1F" text-anchor="middle"
+                                    font-weight="500">600</text>
+                            </g>
+                            <text x="155" y="80" font-size="11" fill="#86868B" text-anchor="middle">mm</text>
+                        </g>
                     </svg>
                 </div>
 
